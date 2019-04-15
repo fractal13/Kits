@@ -1,7 +1,7 @@
 import pygame
 
 ## window constants, these will be adjusted upon calling start_display
-display_width = 800
+display_width = 600
 display_height = 600
 
 # colors
@@ -37,7 +37,7 @@ def start_display(width, height, name):
 ## takes text and displays is to the center of the screen in the given size
 def display_message(display, text, size):
     textFont = pygame.font.Font('CourierNewBold.ttf', size)
-    textSurface = textFont.render(text, True, white)
+    textSurface = textFont.render(text, True, purple)
     textRect = textSurface.get_rect()
     textRect.center = (display_width/2, display_height/2)
     display.blit(textSurface, textRect)
@@ -100,6 +100,15 @@ def draw_image(display, x, y, image):
 ## updates the display
 def update():
 	pygame.display.update()
+
+def setBackground(image_name):
+	image = pygame.image.load(image_name)
+	return image
+
+def drawBackground(display, background):
+	display.blit(background, (0,0))
+	return
+
 
 
 

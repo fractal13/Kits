@@ -1,8 +1,8 @@
 import pygame
 
 ## window constants, these will be adjusted upon calling start_display
-display_width = 800
-display_height = 600
+display_width = 1600
+display_height = 800
 
 # colors
 white = (255, 255, 255)
@@ -96,10 +96,16 @@ def load_image(image_name):
 def draw_image(display, x, y, image):
 	display.blit(image, (x, y))
 	return
+## this will draw an object that has an x and y coordinate as well as an image
+def draw_object(display, object1):
+	display.blit(object1.mImage, (object1.mX, object1.mY))
 
 ## updates the display
 def update():
 	pygame.display.update()
+
+def drawCircle(display, x, y, color):
+	pygame.draw.circle(display, color, (x,y), 0, 0)
 
 
 
