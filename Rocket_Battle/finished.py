@@ -153,7 +153,7 @@ def main_loop():
                 if event.key == pygame.K_SPACE:
                 	# if the Space key was pressed
                 	print("space key pressed")
-                	bullet = Bullet(ship.mX + ship.mWidth/2, ship.mY, 25, 25, -8)
+                	bullet = Bullet(ship.mX + ship.mWidth/2, ship.mY, 25, 25, -3)
                 	BulletList.append(bullet)
                 if event.key == pygame.K_r:
                 	# if the R key was pressed

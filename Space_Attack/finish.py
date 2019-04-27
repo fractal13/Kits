@@ -81,7 +81,7 @@ def drawStars():
  		drawCircle(gameDisplay, x, y, color)
 
 def makeAsteroids():
-    for i in range(10):
+    for i in range(15):
         asteroid = Asteroid(random.randint(0, display_width), random.randint(-900, -60), random.uniform(-1,1), 3, 60, 60, 'Asteroid.png')
         asteroidList.append(asteroid)
 

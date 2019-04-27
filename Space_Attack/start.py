@@ -69,24 +69,23 @@ def main_loop():
                 if event.key == pygame.K_ESCAPE:
                     pygame.quit()
                     quit()
-                if event.key == pygame.K_LEFT:
-                	# if the Left arrow key was pressed
-                	player1.mDX = -3
-                if event.key == pygame.K_RIGHT:
-                	# if the Right arrow key was pressed
-                	player1.mDX = 3
-                if event.key == pygame.K_UP:
-                	# if the Up arrow key was pressed
-                	player1.mDY = -3
-                if event.key == pygame.K_DOWN:
-                	# if the Down arrow key was pressed
-                	player1.mDY = 3
-                if event.key == pygame.K_SPACE:
-                	# if the Space key was pressed
-                	print("space key pressed")
-                if event.key == pygame.K_r:
-                	# if the R key was pressed
-                	print("restart key pressed")
+                ## player 1 controls
+                if event.key == pygame.K_a:
+                    # if the Left arrow key was pressed
+                    player1.mDX = -3
+                if event.key == pygame.K_d:
+                    # if the Right arrow key was pressed
+                    player1.mDX = 3
+                if event.key == pygame.K_w:
+                    # if the Up arrow key was pressed
+                    player1.mDY = -3
+                if event.key == pygame.K_s:
+                    # if the Down arrow key was pressed
+                    player1.mDY = 3
+            
+                ##player 2 controls
+
+
             ## this if statement will keep track of all keys RELEASED
             if event.type == pygame.KEYUP:
                  if event.key == pygame.K_LEFT or event.key == pygame.K_RIGHT:
@@ -94,9 +93,11 @@ def main_loop():
                  if event.key == pygame.K_UP or event.key == pygame.K_DOWN:
                  	player1.mDY = 0
 
-        moveShip(player1)												## this will update our ships position
+       
         gameDisplay.fill(black) 									## set the background to be black (other colors available in myLibrary.py)
+
         drawShip(player1)										 		## this will draw our ship
+        moveShip(player1)                                              ## this will update our ships position
         # this will refresh the screen and make updates
         update()
         clock.tick(60)

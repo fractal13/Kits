@@ -15,13 +15,15 @@ purple = (255, 0, 255)
 
 ###################### example class #################################
 
-# class Square:
-#     def __init__(self, x_pos, y_pos, width, height):
-#         self.mX = x_pos
-#         self.mY = y_pos 
-#         self.mWidth = width
-#         self.mHeight = height
-#         self.mImage = pygame.image.load('image.png')
+# class Thing:
+#     def __init__(self, x_position, y_position, delta_x, delta_y, width, height, image):
+#         self.mX = x_position 						# this sets where our x position will be
+#         self.mY = y_position 						# this sets where our y position will be
+#         self.mDX = delta_x						# this tells us how fast our object moves to the left or right
+#         self.mDY = delta_y						# this tells us how fast our object moves up or down
+#         self.mWidth = width 						# this sets our ships width
+#         self.mHeight = height 					# this sets our ships height
+#         self.mImage = pygame.image.load(image) 	# this tells us which picture to use for our object
 
 ############################# Functions #############################
 ## ************ Use example class as a reference for objects ********* ##
@@ -43,7 +45,7 @@ def display_message(display, text, size):
     display.blit(textSurface, textRect)
     pygame.display.update()
 
-## returns true if the objects are touching, false otherwise (assuming the objects are both rects) images are considered rects
+## returns true if the objects are touching, false otherwise (assuming the objects are both rects) image sprites are rects
 ## both objects must have .mX and .mY and .mWidth and .mHeight data members
 def collide_rect(object1, object2):
 	if object1.mX + object1.mWidth > object2.mX > object1.mX and object1.mY + object1.mHeight > object2.mY > object1.mY:
@@ -106,6 +108,12 @@ def update():
 
 def drawCircle(display, x, y, color):
 	pygame.draw.circle(display, color, (x,y), 0, 0)
+
+def randomNumber(start, end):
+	return random.randint(start, end)
+
+def randomDecimal(start, end):
+	return random.uniform(start, end)
 
 
 
