@@ -14,19 +14,19 @@ clock = pygame.time.Clock()
 programName = "Your programs name here"
 gameDisplay = start_display(display_width, display_height, programName)
 
-bg = setBackground("FroggerBG.png")
+bg = setBackground("images/FroggerBG.png")
 
 
 ## this block of code defines our ship
 class Frog:
     def __init__(self, x_position, y_position, delta_x, delta_y, width, height):
-        self.mX = x_position 							# this sets where our x position will be
-        self.mY = y_position 							# this sets where our y position will be
-        self.mDX = delta_x								# this tells us how fast our frog moves
+        self.mX = x_position 								# this sets where our x position will be
+        self.mY = y_position 								# this sets where our y position will be
+        self.mDX = delta_x									# this tells us how fast our frog moves
         self.mDY = delta_y							
-        self.mWidth = width 							# this sets our ships width
-        self.mHeight = height 							# this sets our ships height
-        self.mImage = pygame.image.load('Frog.png') 	# this tells us which picture to use for our Frog
+        self.mWidth = width 								# this sets our ships width
+        self.mHeight = height 								# this sets our ships height
+        self.mImage = pygame.image.load('images/Frog.png') 	# this tells us which picture to use for our Frog
 
 def makeFrog():
 	return Frog(display_width*.45, display_height*.9, 0,0, 50, 45)

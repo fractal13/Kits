@@ -14,7 +14,7 @@ clock = pygame.time.Clock()
 programName = "Your programs name here"
 gameDisplay = start_display(display_width, display_height, programName)
 
-bg = setBackground("BG.png")
+bg = setBackground("images/BG.png")
 trucks1 = []
 trucks2 = []
 cars1 = []
@@ -26,13 +26,13 @@ logs3 = []
 ## this block of code defines our ship
 class Frog:
     def __init__(self, x_position, y_position, delta_x, delta_y, width, height):
-        self.mX = x_position 							# this sets where our x position will be
-        self.mY = y_position 							# this sets where our y position will be
-        self.mDX = delta_x								# this tells us how fast our frog moves
+        self.mX = x_position 								# this sets where our x position will be
+        self.mY = y_position 								# this sets where our y position will be
+        self.mDX = delta_x									# this tells us how fast our frog moves
         self.mDY = delta_y							
-        self.mWidth = width 							# this sets our ships width
-        self.mHeight = height 							# this sets our ships height
-        self.mImage = pygame.image.load('Frog.png') 	# this tells us which picture to use for our Frog
+        self.mWidth = width 								# this sets our ships width
+        self.mHeight = height 								# this sets our ships height
+        self.mImage = pygame.image.load('images/Frog.png') 	# this tells us which picture to use for our Frog
 
 def draw_frog(frog):
 	draw_image(gameDisplay, frog.mX, frog.mY, frog.mImage)
@@ -55,25 +55,25 @@ class Moving_Object:
 def make_all_objects():
 	## make 7 of each object
 	for i in range(1,4):
-		leftTruck = Moving_Object(display_width + (200 * i), display_height*.81, -2, 0, 107, 57, 'Truck.png')
+		leftTruck = Moving_Object(display_width + (200 * i), display_height*.81, -2, 0, 107, 57, 'images/Truck.png')
 		trucks1.append(leftTruck)
 
-		leftCar = Moving_Object(display_width + (300 * i), display_height*.715, -3, 0, 106, 57, 'Car2.png')
+		leftCar = Moving_Object(display_width + (300 * i), display_height*.715, -3, 0, 106, 57, 'images/Car2.png')
 		cars2.append(leftCar)
 
-		rightTruck = Moving_Object(0 - (200 * i), display_height*.61, 2, 0, 105, 57, 'Truck2.png')
+		rightTruck = Moving_Object(0 - (200 * i), display_height*.61, 2, 0, 105, 57, 'images/Truck2.png')
 		trucks2.append(rightTruck)
 
-		rightCar = Moving_Object(0 - (300 * i), display_height*.525, 3, 0, 105, 57, 'Car.png')
+		rightCar = Moving_Object(0 - (300 * i), display_height*.525, 3, 0, 105, 57, 'images/Car.png')
 		cars1.append(rightCar)
 
-		leftLog1 = Moving_Object(display_width + (300 * i), display_height*.33, -2.5, 0, 236, 59, 'Log.png')
+		leftLog1 = Moving_Object(display_width + (300 * i), display_height*.33, -2.5, 0, 236, 59, 'images/Log.png')
 		logs1.append(leftLog1)
 
-		leftLog2 = Moving_Object(display_width + (350 * i), display_height*.1, -2.5, 0, 236, 59, 'Log.png')
+		leftLog2 = Moving_Object(display_width + (350 * i), display_height*.1, -2.5, 0, 236, 59, 'images/Log.png')
 		logs2.append(leftLog2)
 
-		rightLog = Moving_Object(0 - (350 * i), display_height*.2, 2.5, 0, 236, 59, 'Log.png')
+		rightLog = Moving_Object(0 - (350 * i), display_height*.2, 2.5, 0, 236, 59, 'images/Log.png')
 		logs3.append(rightLog)
 	return
 
