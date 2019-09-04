@@ -3,6 +3,7 @@
 ## Prerequisites
 
 Python - Can be found here: https://www.python.org/downloads/
+
 Pygame - Can be found here: https://www.pygame.org/download.shtml
 
 ## About
