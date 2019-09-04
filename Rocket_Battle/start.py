@@ -19,13 +19,13 @@ gameDisplay = start_display(display_width, display_height, programName)
 ## this block of code defines our ship
 class Ship:
     def __init__(self, x_position, y_position, delta_x, delta_y, width, height):
-        self.mX = x_position 						# this sets where our x position will be
-        self.mY = y_position 						# this sets where our y position will be
-        self.mDX = delta_x							# this tells us how fast our ship moves
+        self.mX = x_position 						        # this sets where our x position will be
+        self.mY = y_position 						        # this sets where our y position will be
+        self.mDX = delta_x							        # this tells us how fast our ship moves
         self.mDY = delta_y							
-        self.mWidth = width 						# this sets our ships width
-        self.mHeight = height 						# this sets our ships height
-        self.mImage = pygame.image.load('GC.jpg') 	# this tells us which picture to use for our ship
+        self.mWidth = width 						        # this sets our ships width
+        self.mHeight = height 						        # this sets our ships height
+        self.mImage = pygame.image.load('images/GC.jpg') 	# this tells us which picture to use for our ship
 
 def makeShip():
 	x_position = display_width * 0.45

@@ -82,7 +82,7 @@ def drawStars():
 
 def makeAsteroids():
     for i in range(15):
-        asteroid = Asteroid(random.randint(0, display_width), random.randint(-900, -60), random.uniform(-1,1), 3, 60, 60, 'Asteroid.png')
+        asteroid = Asteroid(random.randint(0, display_width), random.randint(-900, -60), random.uniform(-1,1), 3, 60, 60, 'images/Asteroid.png')
         asteroidList.append(asteroid)
 
 def draw_move_Asteroids():
@@ -98,7 +98,7 @@ def draw_move_Asteroids():
 ## Player 1 functions
 def makePlayer1Bullet(player1):
     if len(bullets1) < 5:
-        bullet = Bullet(player1.mX + player1.mWidth, player1.mY + player1.mHeight / 2, 5, 0, 50, 16, 'Bullet1.png', 1)
+        bullet = Bullet(player1.mX + player1.mWidth, player1.mY + player1.mHeight / 2, 5, 0, 50, 16, 'images/Bullet1.png', 1)
         bullets1.append(bullet)
 
 def drawPlayer1Bullets():
@@ -114,7 +114,7 @@ def movePlayer1Buttets():
 ## Player 2 functions
 def makePlayer2Bullet(player2):
     if len(bullets2) < 5:
-        bullet = Bullet(player2.mX - 50, player2.mY + player2.mHeight / 2, -5, 0, 50, 16, 'Bullet2.png', 1)
+        bullet = Bullet(player2.mX - 50, player2.mY + player2.mHeight / 2, -5, 0, 50, 16, 'images/Bullet2.png', 1)
         bullets2.append(bullet)
 
 def drawPlayer2Bullets():
@@ -155,8 +155,8 @@ def check_for_collisions(player1, player2):
 def main_loop():
     gameOver = False 
 
-    player1 = makeShip('ShipLeft.png', display_width * .1, display_height * .7) 			#this will make our ship
-    player2 = makeShip('ShipRight.png',display_width * .9, display_height * .7)
+    player1 = makeShip('images/ShipLeft.png', display_width * .1, display_height * .7) 			#this will make our ship
+    player2 = makeShip('images/ShipRight.png',display_width * .9, display_height * .7)
     makeAsteroids()
     ## this while loop will repeat over and over until the game ends
     while not gameOver:

@@ -21,13 +21,13 @@ BulletList = []
 ## this block of code defines our ship
 class Ship:
     def __init__(self, x_position, y_position, delta_x, delta_y, width, height):
-        self.mX = x_position 						# this sets where our x position will be
-        self.mY = y_position 						# this sets where our y position will be
-        self.mDX = delta_x							# this tells us how fast our ship moves
+        self.mX = x_position 						        # this sets where our x position will be
+        self.mY = y_position 						        # this sets where our y position will be
+        self.mDX = delta_x							        # this tells us how fast our ship moves
         self.mDY = delta_y							
-        self.mWidth = width 						# this sets our ships width
-        self.mHeight = height 						# this sets our ships height
-        self.mImage = pygame.image.load('GC.jpg') 	# this tells us which picture to use for our ship
+        self.mWidth = width 						        # this sets our ships width
+        self.mHeight = height 						        # this sets our ships height
+        self.mImage = pygame.image.load('images/GC.jpg') 	# this tells us which picture to use for our ship
 
 class Invader:
     def __init__(self, x_pos, y_pos, width, height):
@@ -36,7 +36,7 @@ class Invader:
         self.mWidth = width 
         self.mHeight = height 
         self.mSpeed = 1
-        self.mImage = pygame.image.load('bronze.png')
+        self.mImage = pygame.image.load('images/bronze.png')
 
 class Bullet:
     def __init__(self, x_pos, y_pos, width, height, bulletSpeed):
@@ -45,7 +45,7 @@ class Bullet:
         self.mWidth = width 
         self.mHeight = height
         self.mSpeed = bulletSpeed
-        self.mImage = pygame.image.load('d3.png')
+        self.mImage = pygame.image.load('images/d3.png')
 
 def make_invaders():
   if len(InvaderList) == 0:
@@ -188,7 +188,7 @@ def main_loop():
         clock.tick(60)
     while gameOver == True:
     	for event in pygame.event.get():
-            if event.type == pygame.QUIT: ## this would be the X button in the top right corner
+            if event.type == pygame.QUIT:                          ## this would be the X button in the top right corner
                 pygame.quit()
                 quit()
             if event.type == pygame.KEYDOWN:

@@ -56,7 +56,7 @@ def moveShip(ship):
 def main_loop():
     gameOver = False 
 
-    player1 = makeShip('ShipLeft.png', display_width * .1, display_height * .7) 			#this will make our ship
+    player1 = makeShip('images/ShipLeft.png', display_width * .1, display_height * .7) 			#this will make our ship
     ## this while loop will repeat over and over until the game ends
     while not gameOver:
     	## this for loop keeps track of all the keys that you push in the game
