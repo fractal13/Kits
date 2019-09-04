@@ -36,14 +36,14 @@ Next we must make a function that will actually make the lasers, such as:
 
 def makePlayer1Laser(player1):
     if len(player1Lasers) < 5:
-        laser = Laser(player1.mX + player1.mWidth, player1.mY + player1.mHeight / 2, 5, 0, 50, 16, 'Laser1.png', 1)
+        laser = Laser(player1.mX + player1.mWidth, player1.mY + player1.mHeight / 2, 5, 0, 50, 16, 'images/Laser1.png', 1)
         player1Lasers.append(laser)
 
 and for player2:
 
 def makePlayer2Laser(player2):
     if len(player2Lasers) < 5:
-        laser = Laser(player2.mX - 50, player2.mY + player2.mHeight / 2, -5, 0, 50, 16, 'Laser2.png', 1)
+        laser = Laser(player2.mX - 50, player2.mY + player2.mHeight / 2, -5, 0, 50, 16, 'images/Laser2.png', 1)
         player2Lasers.append(laser)
 
 So in our main loop, just under where it says "## Player1", add this code:

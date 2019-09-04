@@ -8,7 +8,7 @@ Defining Player 2
 
 In our main loop just under where we define player1, we must define player2 as so:
 
-player2 = makeShip('ShipRight.png',display_width * .9, display_height * .7)
+player2 = makeShip('images/ShipRight.png',display_width * .9, display_height * .7)
 
 
 Drawing Player 2

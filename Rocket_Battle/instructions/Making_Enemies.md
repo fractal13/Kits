@@ -26,7 +26,7 @@ class Invader:
       self.mWidth = width 
       self.mHeight = height 
       self.mSpeed = 1
-      self.mImage = pygame.image.load('bronze.png')
+      self.mImage = pygame.image.load('images/bronze.png')
 
 
 

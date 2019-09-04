@@ -25,7 +25,7 @@ class Bullet:
         self.mWidth = width 
         self.mHeight = height
         self.mSpeed = bulletSpeed
-        self.mImage = pygame.image.load('d3.png')
+        self.mImage = pygame.image.load('images/d3.png')
 
 
 Drawing An Invader

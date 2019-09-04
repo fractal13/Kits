@@ -35,22 +35,22 @@ Now to call this code to make all of our objects, implement this function called
 def make_all_objects():
 	## make 7 of each object
 	for i in range(1,8):
-		leftTruck = Moving_Object(display_width + (200 * i), display_height*.81, -2, 0, 107, 57, 'Truck.png')
+		leftTruck = Moving_Object(display_width + (200 * i), display_height*.81, -2, 0, 107, 57, 'images/Truck.png')
 		trucks1.append(leftTruck)
-		leftCar = Moving_Object(display_width + (300 * i), display_height*.715, -3, 0, 106, 57, 'Car2.png')
+		leftCar = Moving_Object(display_width + (300 * i), display_height*.715, -3, 0, 106, 57, 'images/Car2.png')
 		cars2.append(leftCar)
 
-		rightTruck = Moving_Object(0 - (200 * i), display_height*.61, 2, 0, 105, 57, 'Truck2.png')
+		rightTruck = Moving_Object(0 - (200 * i), display_height*.61, 2, 0, 105, 57, 'images/Truck2.png')
 		trucks2.append(rightTruck)
-		rightCar = Moving_Object(0 - (300 * i), display_height*.525, 3, 0, 105, 57, 'Car.png')
+		rightCar = Moving_Object(0 - (300 * i), display_height*.525, 3, 0, 105, 57, 'images/Car.png')
 		cars1.append(rightCar)
 
-		leftLog1 = Moving_Object(display_width + (300 * i), display_height*.33, -2.5, 0, 236, 59, 'Log.png')
+		leftLog1 = Moving_Object(display_width + (300 * i), display_height*.33, -2.5, 0, 236, 59, 'images/Log.png')
 		logs1.append(leftLog1)
-		leftLog2 = Moving_Object(display_width + (350 * i), display_height*.1, -2.5, 0, 236, 59, 'Log.png')
+		leftLog2 = Moving_Object(display_width + (350 * i), display_height*.1, -2.5, 0, 236, 59, 'images/Log.png')
 		logs2.append(leftLog2)
 
-		rightLog = Moving_Object(0 - (350 * i), display_height*.2, 2.5, 0, 236, 59, 'Log.png')
+		rightLog = Moving_Object(0 - (350 * i), display_height*.2, 2.5, 0, 236, 59, 'images/Log.png')
 		logs3.append(rightLog)
 
 Finally, call make_all_objects() at the very top of the mainLoop function, as this will make all our objects.
