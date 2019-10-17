@@ -15,3 +15,5 @@ This repo contains a few starter pygame kits. Each kit contains a start.py file,
 Clone this repo and open the folder in an IDE and run start.py
 
 Alternatively, navigate to one of the kits via Command Line and run: **python start.py**
+
+Enjoy
