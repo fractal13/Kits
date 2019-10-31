@@ -83,15 +83,15 @@ def main_loop():
                     # if the Down arrow key was pressed
                     player1.mDY = 3
             
-                ##player 2 controls
+                ## player 2 controls
 
 
             ## this if statement will keep track of all keys RELEASED
             if event.type == pygame.KEYUP:
-                 if event.key == pygame.K_LEFT or event.key == pygame.K_RIGHT:
-                 	player1.mDX = 0
-                 if event.key == pygame.K_UP or event.key == pygame.K_DOWN:
-                 	player1.mDY = 0
+                if event.key == pygame.K_a or event.key == pygame.K_d:
+                    player1.mDX = 0
+                if event.key == pygame.K_w or event.key == pygame.K_s:
+                    player1.mDY = 0
 
        
         gameDisplay.fill(black) 									## set the background to be black (other colors available in myLibrary.py)
