@@ -101,5 +101,7 @@ def main_loop():
         # this will refresh the screen and make updates
         pygame.display.update()
         clock.tick(60)
+        
+    ## gameOver
 
 main_loop()

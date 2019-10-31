@@ -4,12 +4,13 @@ Restarting
 Some users want to play again without having to re-open the program.
 This a good idea.
 
-Just after the "while not gameOver:" indentation insert another while loop for "while gameOver:"
+Just after the "while not gameOver:" indentation insert another while loop for "while gameOver:".
+This should be right after "## gameOver", and at the same indentation level.
 
 Like this:
 
-while gameOver == True:
-    	for event in pygame.event.get():
+    while gameOver == True:
+        for event in pygame.event.get():
             if event.type == pygame.QUIT: ## this would be the X button in the top right corner
                 pygame.quit()
                 quit()
